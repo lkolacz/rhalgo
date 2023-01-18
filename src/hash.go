@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"crypto/sha256"
 	"encoding/hex"
+	"encoding/json"
 	"log"
 	"os"
 	"path/filepath"
@@ -28,6 +29,11 @@ func Sum256Hash(b []byte) Hash {
 
 func (hash Hash) String() string {
 	return hex.EncodeToString(hash[:])
+}
+
+func (delta Delta) ToBytes() []byte {
+	jsonString, _ := json.Marshal(delta)
+	return jsonString
 }
 
 func contains(s []string, str string) bool {
