@@ -1,0 +1,7 @@
+test line A - have been changed
+test line C
+added test line inside the chain
+test line D
+test line E
+new line :)
+extra bonus !!!
